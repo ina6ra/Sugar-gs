@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "gas-mock": "https://github.com/ina6ra/gas-mock",
+    "mocha": "^3.4.2"
+  },
+  "scripts": {
+    "cleanup": "rm -rf src/ gapps.config.json",
+    "clone": "gapps clone 1pwTUVPPaLxomQ-KmXajgU4Zs-D6z34NKw6MWVcmLy7F4Xpv0YDieZoOE",
+    "upload": "gapps upload"
+  }
+}
