@@ -10,7 +10,7 @@ describe('Array Class', function() {
     glib.extend({
       namespaces: [Array]
     });
-    result = glib.checkFunction_(glib.Array, 'unique');
+    result = glib.Array.hasOwnProperty('unique');
     assert.equal(result, true);
   });
 });

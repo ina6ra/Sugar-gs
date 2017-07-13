@@ -10,7 +10,7 @@ describe('Object Class', function() {
     glib.extend({
       namespaces: [Object]
     });
-    result = glib.checkFunction_(glib.Object, 'toQueryString');
+    result = glib.Object.hasOwnProperty('toQueryString');
     assert.equal(result, true);
   });
 });
