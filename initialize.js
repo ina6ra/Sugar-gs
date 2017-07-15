@@ -4,7 +4,11 @@ var mymock = gas.globalMockDefault;
 
 var mymock = gas.globalMockDefault;
 
-exports.assert = require('assert');
-exports.gas = gas;
-exports.mymock = mymock;
-exports.glib = glib;
+// ソースフォルダの指定はプロジェクトルートからの相対パス
+var glib = gas.require('./src', mymock);
+
+module.exports = {
+  assert: require('assert'),
+  gas: gas,
+  glib: glib
+}
