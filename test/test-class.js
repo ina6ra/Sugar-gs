@@ -1,4 +1,4 @@
-var common = require('./common');
+var common = require('../initialize');
 var assert = common.assert;
 var glib = common.glib;
 
