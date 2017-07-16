@@ -10,9 +10,13 @@ describe('Sugar GAS Class', function() {
   });
 
   it('Sugar.GAS.extend() が正しく設定されること', function() {
-    glib.extend({
+    error = (()=>glib.Sugar.GAS.hasOwnProperty('extend'));
+    assert.throws(error, /hasOwnProperty/);
+    glib.GAS.extend({
       namespaces: ['GAS']
     });
     assert.equal(glib.Sugar.GAS.hasOwnProperty('extend'), true);
   });
+
+  it('GAS.extend() のテスト');
 });

@@ -11,7 +11,7 @@ describe('Sugar Sub Class', function() {
   it('Array.unique() が正しく設定されること', function() {
     error = (()=>glib.Array.hasOwnProperty('unique'));
     assert.throws(error, /hasOwnProperty/);
-    glib.extend({
+    glib.Sugar.GAS.extend({
       namespaces: [Array]
     });
     result = glib.Array.hasOwnProperty('unique');
@@ -21,7 +21,7 @@ describe('Sugar Sub Class', function() {
   it('Date.getWeekday() が正しく設定されること', function() {
     error = (()=>glib.Date.hasOwnProperty('getWeekday'));
     assert.throws(error, /hasOwnProperty/);
-    glib.extend({
+    glib.Sugar.GAS.extend({
       namespaces: [Date]
     });
     result = glib.Date.hasOwnProperty('getWeekday');
@@ -33,7 +33,7 @@ describe('Sugar Sub Class', function() {
   it('Number.range() が正しく設定されること', function() {
     error = (()=>glib.Number.hasOwnProperty('range'));
     assert.throws(error, /hasOwnProperty/);
-    glib.extend({
+    glib.Sugar.GAS.extend({
       namespaces: [Number]
     });
     result = glib.Number.hasOwnProperty('range');
@@ -43,7 +43,7 @@ describe('Sugar Sub Class', function() {
   it('Object.toQueryString() が正しく設定されること', function() {
     error = (()=>glib.Object.hasOwnProperty('toQueryString'));
     assert.throws(error, /hasOwnProperty/);
-    glib.extend({
+    glib.Sugar.GAS.extend({
       namespaces: [Object]
     });
     result = glib.Object.hasOwnProperty('toQueryString');
@@ -56,7 +56,7 @@ describe('Sugar Sub Class', function() {
   it('String.underscore() が正しく設定されること', function() {
     error = (()=>glib.String.hasOwnProperty('underscore'));
     assert.throws(error, /hasOwnProperty/);
-    glib.extend({
+    glib.Sugar.GAS.extend({
       namespaces: [String]
     });
     result = glib.String.hasOwnProperty('underscore');
