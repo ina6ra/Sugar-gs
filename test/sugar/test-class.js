@@ -2,7 +2,7 @@ var common = require('../../initialize');
 var assert = common.assert;
 var glib = common.glib;
 
-// test for Array Class
+// test for Sugar Sub Class
 describe('Sugar Sub Class', function() {
 
   var error = null;

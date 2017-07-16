@@ -2,12 +2,8 @@ var common = require('../../initialize');
 var assert = common.assert;
 var glib = common.glib;
 
-// test for Array Class
+// test for Sugar Class
 describe('Sugar Class', function() {
-
-  it('Sugar.extend() が存在すること', function() {
-    assert.equal(glib.Sugar.hasOwnProperty('extend'), true);
-  });
 
   it('Sugar.Array.unique() が存在すること', function() {
     assert.equal(glib.Sugar.Array.hasOwnProperty('unique'), true);
