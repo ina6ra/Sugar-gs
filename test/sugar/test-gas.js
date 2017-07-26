@@ -12,12 +12,7 @@ describe('Sugar GAS Class', function() {
   // mocha がタイムアウトするまでの時間を延長
   this.timeout(5000);
 
-  it('Sugar.GAS.extend() が正しく設定されること', function() {
-    error = (()=>glib.Sugar.GAS.hasOwnProperty('extend'));
-    assert.throws(error, /hasOwnProperty/);
-    glib.GAS.extend({
-      namespaces: ['GAS']
-    });
+  it('Sugar.GAS.extend() が存在すること', function() {
     assert.equal(glib.Sugar.GAS.hasOwnProperty('extend'), true);
   });
 

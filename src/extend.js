@@ -10,7 +10,7 @@ var GAS = {
   extend: function(options) {
     if(options == null) {
       options = {
-        namespaces: [Array, Date, Number, Object, String, 'GAS']
+        namespaces: [Array, Date, Number, Object, String]
       };
     }
     if(options.namespaces == null) return false;
@@ -23,7 +23,6 @@ var GAS = {
         case 'Number': Number = Sugar.Number; break;
         case 'Object': Object = Sugar.Object; break;
         case 'String': String = Sugar.String; break;
-        case 'GAS': Sugar.GAS = GAS; break;
       }
     });
   },
