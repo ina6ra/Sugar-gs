@@ -1,6 +1,6 @@
-var common = require('../../initialize');
-var assert = common.assert;
-var glib = common.glib;
+var init = require('../../initialize');
+var assert = init.assert;
+var glib = init.glib;
 
 // test for Sugar Sub Class
 describe('Sugar Sub Class', function() {
