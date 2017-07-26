@@ -5,6 +5,8 @@
 //var String;
 
 var GAS = {
+
+  // extend method
   extend: function(options) {
     if(options == null) {
       options = {
@@ -24,5 +26,22 @@ var GAS = {
         case 'GAS': Sugar.GAS = GAS; break;
       }
     });
+  },
+
+  // createGetUrl method
+  createGetUrl: function(url, payload) {
+    payload = Sugar.Object.clone(payload);
+    payload = Sugar.Object.toQueryString(payload);
+    return (payload == '') ? url : url+'?'+payload;
+  },
+
+  // fetch method
+  fetch: function(url, options) {
+    if(options == null) options = {};
+    if(options['method'] == null || options['method'].match(/get/i) != null) {
+      url = this.createGetUrl(url, options['payload']);
+      delete(options['payload']);
+    }
+    return UrlFetchApp.fetch(url, options);
   }
 }
